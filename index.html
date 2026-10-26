@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="todo-container">
+
+        <header class="app-header">
+            <h1>My To-Do List</h1>
+            <p>Organize your day, achieve your goals.</p>
+        </header>
+
+        <section class="task-stats">
+            <div class="stat-card">
+                <span id="totalTasks">0</span>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="stat-card">
+                <span id="completedTasks">0</span>
+                <p>Completed</p>
+            </div>
+
+            <div class="stat-card">
+                <span id="pendingTasks">0</span>
+                <p>Pending</p>
+            </div>
+        </section>
+
+        <form class="input-section" id="taskForm">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What needs to be done?"
+                maxlength="150"
+                autocomplete="off"
+                aria-label="Enter a new task"
+            >
+            <button type="submit" id="addTaskBtn">+ Add Task</button>
+        </form>
+
+        <p id="message" role="status" aria-live="polite"></p>
+
+        <nav class="filter-section" aria-label="Filter tasks">
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="pending">Pending</button>
+            <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+        </nav>
+
+        <ul id="taskList"></ul>
+
+        <p id="emptyMessage">✨ No tasks here. Add a task to get started!</p>
+
+        <footer class="app-footer">
+            <span>Stay focused. Keep growing.</span>
+            <button type="button" id="clearCompletedBtn">Clear Completed</button>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
